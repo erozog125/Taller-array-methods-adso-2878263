@@ -10,14 +10,14 @@ document.getElementById('background').addEventListener('change',function(){
         case 'green':
             document.body.style.backgroundColor = 'green';
             break;
-        case 'white':
-            document.body.style.backgroundColor = 'white';
+        case 'purple':
+            document.body.style.backgroundColor = 'purple';
             break;
         case 'black':
             document.body.style.backgroundColor = 'black';
             break;
-        case 'red':
-            document.body.style.backgroundColor = 'red';
+        case 'grey':
+            document.body.style.backgroundColor = 'grey';
             break;
     }
 });
