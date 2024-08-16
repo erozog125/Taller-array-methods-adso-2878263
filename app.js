@@ -8,7 +8,7 @@ document.getElementById('background').addEventListener('change',function(){
             document.body.style.backgroundColor = 'yellow';
             break;
         case 'green':
-            document.body.style.backgroundColor = 'grreen';
+            document.body.style.backgroundColor = 'green';
             break;
         case 'white':
             document.body.style.backgroundColor = 'white';
