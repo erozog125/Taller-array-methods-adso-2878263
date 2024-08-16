@@ -1,18 +1,23 @@
 
-const colores = ['azul', 'rojo', 'naranja', 'violeta', 'marron', 'verde'];
-
-const colorSelector = document.getElementById('colorSelector');
-
-
-colores.forEach(color => {
+const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple', 'Black'];
+const colorSelect = document.getElementById('color-select');
+colors.forEach(color => {
     const option = document.createElement('option');
-    option.value = color;
-    option.textContent = color.charAt(0).toUpperCase() + color.slice(1);
-    colorSelector.appendChild(option);
+    option.textContent = color;
+    colorSelect.appendChild(option);
 });
 
+// function changeColor(){
+//     const selectedColor = colorSelect.value;
+//     document.body.style.backgroundColor = selectedColor;
+// }
 
-colorSelector.addEventListener('change', function() {
-    const selectedColor = colorSelector.value;
+// colorSelect.addEventListener('change', changeBackgroundColor)
+
+
+colorSelect.addEventListener('change', function() {
+    const selectedColor = colorSelect.value;
+
     document.body.style.backgroundColor = selectedColor;
+    
 });
