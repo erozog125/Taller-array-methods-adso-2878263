@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; 
+    transition: background-color 0.5s ease; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+label {
+    font-size: 18px; 
+    margin-right: 10px; 
+}
+
+select {
+    margin: 20px 0; 
+    padding: 10px;
+    font-size: 16px; 
+    width: 100%; 
+    max-width: 300px; 
+}
+
+nav {
+    margin-top: 20px; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: white; 
+    background-color: #3f4245; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background-color: #3f4245;  
+}
+
+#confirmationMessage {
+    margin-top: 20px; 
+    font-size: 16px; 
+    color: rgb(255, 255, 255); 
+}
+
+/*
+resposivo
+*/
+
+@media (max-width: 768px) {
+    label {
+        font-size: 16px; 
+    }
+
+    select {
+        font-size: 14px; 
+    }
+
+    nav ul li {
+        margin: 5px; 
+    }
+
+    nav ul li a {
+        padding: 8px 12px; 
+    }
+
+    #confirmationMessage {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    label {
+        font-size: 14px; 
+    }
+
+    select {
+        font-size: 12px; 
+    }
+
+    nav ul li a {
+        font-size: 14px; 
+    }
+
+    #confirmationMessage {
+        font-size: 12px; 
+    }
+}
