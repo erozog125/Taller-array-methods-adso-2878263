@@ -3,11 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-body{
-    background-color: crimson;
+body {
+  background-color: crimson;
 }
-
 .nav > ul {
   display: flex;
   flex-direction: column;
@@ -31,4 +29,14 @@ i {
   font-style: normal;
   font-size: 20px;
   padding: 1rem;
+}
+.exercise1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+select {
+  padding: 1rem;
+  border-radius: 1rem;
+  border-style: none;
 }
