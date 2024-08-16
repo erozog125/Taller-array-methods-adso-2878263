@@ -1,0 +1,18 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+.color-picker {
+    width: 12rem;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.color-picker:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
