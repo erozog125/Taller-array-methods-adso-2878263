@@ -1,0 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#color-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
