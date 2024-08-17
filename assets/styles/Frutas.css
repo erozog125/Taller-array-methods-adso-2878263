@@ -4,23 +4,23 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f7f6;
-    position: relative;
+    background-color: #121212; /* Fondo negro */
+    color: #B0B0B0; /* Texto gris claro */
+    padding: 20px; 
+    text-align: center; 
 }
 
 h1 {
-    text-align: center;
-    color: #4a90e2;
+    color: #4CAF50; /* Verde esmeralda */
 }
 
+/* Estilo del botón de volver */
 #back-button {
     position: absolute;
     top: 20px;
     left: 20px;
     text-decoration: none;
-    background-color: #4a90e2;
+    background-color: #4A90E2; /* Azul */
     color: white;
     border-radius: 5px;
     padding: 10px;
@@ -28,15 +28,17 @@ h1 {
 }
 
 #back-button:hover {
-    background-color: #357ab8;
+    background-color: #357AB8; /* Azul más oscuro al pasar el ratón */
 }
 
 #search-input {
     padding: 10px;
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #B0B0B0; /* Borde gris claro */
     border-radius: 5px;
     margin-bottom: 20px;
+    background-color: #1E1E1E; /* Fondo gris oscuro */
+    color: #B0B0B0; /* Texto gris claro */
 }
 
 #fruits-container {
@@ -49,11 +51,11 @@ h1 {
     display: flex;
     align-items: center;
     margin: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #B0B0B0; /* Borde gris claro */
     border-radius: 5px;
     padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #1E1E1E; /* Fondo gris oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     width: calc(100% - 40px); /* Full width minus margins */
     max-width: 300px; /* Max width for each fruit card */
 }

@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white; 
+    background-color: #121212; /* Fondo negro */
+    color: #B0B0B0; /* Texto gris claro */
     transition: background-color 0.5s ease; 
     padding: 20px; 
     text-align: center; 
@@ -15,6 +16,7 @@ body {
 label {
     font-size: 18px; 
     margin-right: 10px; 
+    color: #B0B0B0; /* Texto gris claro */
 }
 
 select {
@@ -23,6 +25,10 @@ select {
     font-size: 16px; 
     width: 100%; 
     max-width: 300px; 
+    background-color: #1E1E1E; /* Fondo gris oscuro */
+    color: #B0B0B0; /* Texto gris claro */
+    border: 1px solid #B0B0B0; /* Borde gris claro */
+    border-radius: 5px; 
 }
 
 nav {
@@ -44,26 +50,23 @@ nav ul li {
 nav ul li a {
     text-decoration: none; 
     color: white; 
-    background-color: #3f4245; 
+    background-color: #4A90E2; /* Azul */
     padding: 10px 15px; 
     border-radius: 5px; 
     transition: background-color 0.3s ease; 
 }
 
 nav ul li a:hover {
-    background-color: #3f4245;  
+    background-color: #357AB8; /* Azul más oscuro al pasar el ratón */
 }
 
 #confirmationMessage {
     margin-top: 20px; 
     font-size: 16px; 
-    color: rgb(255, 255, 255); 
+    color: #B0B0B0; /* Texto gris claro */
 }
 
-/*
-resposivo
-*/
-
+/* Media Queries para Responsividad */
 @media (max-width: 768px) {
     label {
         font-size: 16px; 
