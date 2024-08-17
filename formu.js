@@ -1,10 +1,12 @@
 let personas = [];
 
+// Genera un ID único y corto
 function generarId() {
     return Math.random().toString(36).substr(2, 6);
 }
 
-document.getElementById('guardarBtn').addEventListener('click', () => {
+// Función para guardar una persona
+function guardarPersona() {
     const id = document.getElementById('idPersona').value || generarId();
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
@@ -37,16 +39,21 @@ document.getElementById('guardarBtn').addEventListener('click', () => {
         alert('Persona guardada');
     }
 
-    console.log(personas);
+    // Resetear el formulario después de guardar
     document.getElementById('personForm').reset();
     document.getElementById('idPersona').value = '';
-});
 
-document.getElementById('listarBtn').addEventListener('click', () => {
+    // Actualizar la lista de personas guardadas en localStorage
+    localStorage.setItem('personas', JSON.stringify(personas));
+}
+
+// Función para listar las personas
+function listarPersonas() {
     const container = document.getElementById('cardsContainer');
     container.innerHTML = '';
 
-    console.log('Listando personas:', personas);
+    // Cargar las personas desde localStorage
+    personas = JSON.parse(localStorage.getItem('personas')) || [];
 
     if (personas.length === 0) {
         container.innerHTML = '<p>No hay personas registradas</p>';
@@ -66,9 +73,10 @@ document.getElementById('listarBtn').addEventListener('click', () => {
         `;
         container.appendChild(card);
     });
-});
+}
 
-document.getElementById('editarBtn').addEventListener('click', () => {
+// Función para editar una persona
+function editarPersona() {
     const id = prompt('Introduce el ID de la persona que quieres editar:');
     const persona = personas.find(p => p.id === id);
 
@@ -83,4 +91,14 @@ document.getElementById('editarBtn').addEventListener('click', () => {
     } else {
         alert('Persona no encontrada');
     }
-});
+}
+
+// Asignar eventos a los botones
+document.getElementById('guardarBtn').addEventListener('click', guardarPersona);
+document.getElementById('listarBtn').addEventListener('click', listarPersonas);
+document.getElementById('editarBtn').addEventListener('click', editarPersona);
+
+// Cargar las personas almacenadas en localStorage al cargar la página
+window.onload = function () {
+    personas = JSON.parse(localStorage.getItem('personas')) || [];
+};
