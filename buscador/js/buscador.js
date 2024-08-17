@@ -5,7 +5,6 @@ let searchfruit = document.getElementById("search");
 let countChange = 0;
 let imgContent;
 let nameFruit;
-let divCard;
 searchfruit.addEventListener("change", function () {
   countChange++;
   const resultSearch = fruits.find(
@@ -17,7 +16,7 @@ searchfruit.addEventListener("change", function () {
 
 function createFruitCard(resultSearch) {
   if (countChange < 2) {
-    divCard = document.createElement("div");
+    const divCard = document.createElement("div");
     divCard.classList.add("result-Search");
     divCard.id = resultSearch.id;
 
@@ -32,14 +31,10 @@ function createFruitCard(resultSearch) {
     divCard.appendChild(nameFruit);
     container.appendChild(divCard);
   } else {
-    updateFruit(resultSearch);
-  }
+    let existingCard = document.getElementById(resultSearch.id);
 
-  function updateFruit(resultSearch) {
-    let cardFruit = document.getElementById(resultSearch.id);
-
-    cardFruit.querySelector("img").alt = resultSearch.nombre;
-    cardFruit.querySelector("img").alt = resultSearch.image;
-    cardFruit.querySelector("h2").textContent = resultSearch.nombre;
+    existingCard.querySelector("img").src = resultSearch.image;
+    existingCard.querySelector("img").alt = resultSearch.nombre;
+    existingCard.querySelector("h2").textContent = resultSearch.nombre;
   }
 }
