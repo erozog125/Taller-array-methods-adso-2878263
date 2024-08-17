@@ -1,7 +1,6 @@
 let persons = [];
         let currentEditId = null;
 
-        // Función para guardar o actualizar una persona
         function savePerson() {
             const name = document.getElementById('name').value.trim();
             const surname = document.getElementById('surname').value.trim();
@@ -10,7 +9,7 @@ let persons = [];
             const bloodType = document.getElementById('bloodType').value.trim();
             const imageInput = document.getElementById('image');
 
-            // Validar que todos los campos obligatorios tengan un valor
+
             if (!name || !surname || !age || !gender || !bloodType) {
                 alert('Por favor, complete todos los campos obligatorios.');
                 return;
@@ -22,7 +21,7 @@ let persons = [];
             }
 
             if (currentEditId) {
-                // Actualizar persona existente
+
                 const personIndex = persons.findIndex(p => p.id === currentEditId);
                 if (personIndex !== -1) {
                     persons[personIndex] = {
@@ -38,7 +37,6 @@ let persons = [];
                 }
                 currentEditId = null;
             } else {
-                // Guardar nueva persona
                 const person = {
                     id: persons.length + 1,
                     name,
@@ -56,7 +54,6 @@ let persons = [];
             listPersons();
         }
 
-        // Función para listar las personas
         function listPersons() {
             const container = document.getElementById('persons-container');
             container.innerHTML = '';
@@ -77,7 +74,6 @@ let persons = [];
             });
         }
 
-        // Función para editar una persona
         function editPerson() {
             const id = prompt('Ingrese el ID de la persona que desea editar:');
             const person = persons.find(p => p.id == id);
@@ -95,7 +91,6 @@ let persons = [];
             }
         }
 
-        // Función para limpiar el formulario
         function clearForm() {
             document.getElementById('name').value = '';
             document.getElementById('surname').value = '';

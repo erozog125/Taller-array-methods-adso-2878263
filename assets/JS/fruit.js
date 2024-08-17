@@ -20,7 +20,7 @@ const fruitInput = document.getElementById('fruitInput');
 const fruitList = document.getElementById('fruitList');
 
 function displayFruits() {
-    fruitList.innerHTML = ''; // Limpiar la lista antes de mostrar los resultados
+    fruitList.innerHTML = '';
 
     fruits.forEach(fruit => {
         const fruitItem = document.createElement('div');
@@ -39,7 +39,7 @@ fruitInput.addEventListener('input', function() {
         fruit.name.toLowerCase().includes(searchTerm)
     );
 
-    fruitList.innerHTML = ''; // Limpiar la lista antes de mostrar los resultados
+    fruitList.innerHTML = '';
 
     filteredFruits.forEach(fruit => {
         const fruitItem = document.createElement('div');
@@ -52,5 +52,5 @@ fruitInput.addEventListener('input', function() {
     });
 });
 
-// Mostrar las frutas al cargar la página
+
 document.addEventListener('DOMContentLoaded', displayFruits);
