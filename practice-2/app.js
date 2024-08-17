@@ -36,7 +36,6 @@ function searchFruit() {
     const value = inputPrompt.value.toLowerCase();
     const resultFilter = fruits.filter(fruit => fruit.fruit.toLowerCase().includes(value));
 
-
     if (resultFilter.length > 0) {
         result.innerHTML = resultFilter.map(fruit => `
             <div>
