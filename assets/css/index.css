@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F0F6; /* Fondo rosa claro */
+    color: #4A4A4A; /* Texto gris oscuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Añadir padding al body */
+}
+
+nav {
+    background-color: #D81B60; /* Rosa oscuro */
+    padding: 20px; /* Aumentar padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    position: sticky; /* Fijar la navegación en la parte superior */
+    top: 0; /* Fijar en la parte superior */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+}
+
+nav ul li {
+    margin: 0 10px; /* Reducir margen */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* Blanco */
+    font-size: 20px; /* Aumentar tamaño de fuente */
+    padding: 12px 18px; /* Aumentar padding */
+    border-radius: 25px; /* Bordes más redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF4081; /* Rosa brillante al pasar el ratón */
+    transform: translateY(-3px);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px; /* Reducir margen superior */
+    font-size: 2.5em; /* Aumentar tamaño de fuente */
+    color: #D81B60; /* Rosa oscuro */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px; /* Aumentar padding */
+    background-color: #FFFFFF; /* Fondo blanco */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}

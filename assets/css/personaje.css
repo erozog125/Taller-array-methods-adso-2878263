@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF0F5; /* Lavender blush */
+    color: #4A4A4A;
+    position: relative;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #FF69B4; /* Hot Pink */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    background-color: #FF1493; /* Deep Pink */
+    color: white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+#back-button:hover {
+    background-color: #FF69B4; /* Hot Pink */
+}
+
+#person-form {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3); /* Hot Pink shadow */
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="text"], input[type="number"], select, input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #FFB6C1; /* Light Pink */
+    border-radius: 8px;
+    background-color: #FFF0F5; /* Lavender blush */
+    color: #4A4A4A;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #FF69B4; /* Hot Pink */
+    outline: none;
+}
+
+#search-container {
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #FFB6C1; /* Light Pink */
+    border-radius: 8px;
+    background-color: #FFF0F5; /* Lavender blush */
+    color: #4A4A4A;
+}
+
+#persons-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 2px solid #FFB6C1; /* Light Pink */
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2); /* Hot Pink shadow */
+    transition: transform 0.3s;
+    width: 300px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #FF69B4; /* Hot Pink */
+}
+
+button {
+    background-color: #FF69B4; /* Hot Pink */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #FF1493; /* Deep Pink */
+}

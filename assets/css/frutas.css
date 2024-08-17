@@ -1,0 +1,67 @@
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F0F6;
+            color: #4A4A4A;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #D81B60;
+        }
+        #back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            background-color: #FF4081;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+        #back-button:hover {
+            background-color: #D5006D;
+        }
+        #search-input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #D81B60;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #F8F0F6;
+            color: #4A4A4A;
+        }
+        #fruits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .fruit {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            border: 1px solid #D81B60;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: calc(100% - 40px);
+            max-width: 300px;
+        }
+        .fruit img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        @media (min-width: 600px) {
+            .fruit {
+                width: calc(50% - 40px);
+            }
+        }
+        @media (min-width: 900px) {
+            .fruit {
+                width: calc(33.33% - 40px);
+            }
+        }
