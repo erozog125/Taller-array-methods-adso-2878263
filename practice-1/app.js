@@ -1,4 +1,4 @@
-const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple', 'Black'];
+const colors = ['Red', 'Green', 'Blue', 'Yellow', 'Purple'];
 const colorSelect = document.getElementById('color-select');
 colors.forEach(color => {
     const option = document.createElement('option');
@@ -12,3 +12,4 @@ colorSelect.addEventListener('change', function() {
     document.body.style.backgroundColor = selectedColor;
 
 });
+
