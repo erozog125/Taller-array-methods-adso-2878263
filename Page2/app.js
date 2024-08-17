@@ -1,17 +1,62 @@
 const frutas = [
-    { nombre: "Manzana", imagen: 'assets/manzana.png' },
-    { nombre: "Banana", imagen: "https://via.placeholder.com/150?text=Banana" },
-    { nombre: "Cereza", imagen: "https://via.placeholder.com/150?text=Cereza" },
-    { nombre: "Fresa", imagen: "https://via.placeholder.com/150?text=Fresa" },
-    { nombre: "Limón", imagen: "https://via.placeholder.com/150?text=Limón" },
-    { nombre: "Mango", imagen: "https://via.placeholder.com/150?text=Mango" },
-    { nombre: "Naranja", imagen: "https://via.placeholder.com/150?text=Naranja" },
-    { nombre: "Papaya", imagen: "https://via.placeholder.com/150?text=Papaya" },
-    { nombre: "Pera", imagen: "https://via.placeholder.com/150?text=Pera" },
-    { nombre: "Piña", imagen: "https://via.placeholder.com/150?text=Piña" },
-    { nombre: "Sandía", imagen: "https://via.placeholder.com/150?text=Sandía" },
-    { nombre: "Uva", imagen: "https://via.placeholder.com/150?text=Uva" },
-    { nombre: "Durazno", imagen: "https://via.placeholder.com/150?text=Durazno" },
-    { nombre: "Coco", imagen: "https://via.placeholder.com/150?text=Coco" },
-    { nombre: "Melón", imagen: "https://via.placeholder.com/150?text=Melón" }
+    { nombre: "Cereza", imagen: 'assets/cereza.jpg' },
+    { nombre: "Fresas", imagen: 'assets/fresas.jpg' },
+    { nombre: "Kiwi", imagen: 'assets/kiwi.jpg' },
+    { nombre: "Mango", imagen: 'assets/mango.jpg' },
+    { nombre: "Manzana", imagen: 'assets/manzana.jpg' },
+    { nombre: "Papaya", imagen: 'assets/papaya.jpg' },
+    { nombre: "Pera", imagen: 'assets/pera.jpg' },
+    { nombre: "Piña", imagen: 'assets/piña.jpg' },
+    { nombre: "Uvas", imagen: 'assets/uvas.jpg' },
+    { nombre: "Sandía", imagen: 'assets/sandia.jpg' },
+    { nombre: "Limón", imagen: 'assets/limon.jpg' },
+    { nombre: "Naranja", imagen: 'assets/naranja.jpg' },
+    { nombre: "Durazno", imagen: 'assets/durazno.jpg' },
+    { nombre: "Coco", imagen: 'assets/coco.jpg' },
+    { nombre: "Melón", imagen: 'assets/melon.jpg' }
 ];
+
+const fruitInput = document.getElementById("fruitInput");
+const searchButton = document.getElementById("searchButton");
+const fruitContainer = document.getElementById("fruitContainer");
+
+// Función para mostrar las frutas filtradas
+function mostrarFrutas(filtradas) {
+    fruitContainer.innerHTML = ""; 
+
+    filtradas.forEach(function(fruta) {
+ 
+        const fruitItem = document.createElement("div");
+        fruitItem.className = "fruit-item";
+
+        // Añadir la imagen
+        const fruitImage = document.createElement("img");
+        fruitImage.src = fruta.imagen;
+        fruitImage.alt = fruta.nombre;
+
+        // Añadir el nombre de la fruta
+        const fruitName = document.createElement("p");
+        fruitName.textContent = fruta.nombre;
+
+        fruitItem.appendChild(fruitImage);
+        fruitItem.appendChild(fruitName);
+
+        fruitContainer.appendChild(fruitItem);
+    });
+
+    if (filtradas.length > 0) {
+        const fruitItem = document.querySelector(".fruit-item");
+        fruitItem.style.display = "block";
+    }
+}
+
+// Función para filtrar frutas y mostrarlas
+function buscarFruta() {
+    const query = fruitInput.value.toLowerCase();
+
+    const frutasFiltradas = frutas.filter(function(fruta) {
+        return fruta.nombre.toLowerCase().includes(query);
+    });
+    mostrarFrutas(frutasFiltradas);
+}
+searchButton.addEventListener("click", buscarFruta);

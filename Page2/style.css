@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+h1 {
+    font-size: 24px;
+}
+.search-bar {
+    margin: 20px 0;
+}
+#fruitInput {
+    font-size: 18px;
+    padding: 8px;
+    width: 300px;
+    margin-right: 10px;
+}
+#searchButton {
+    font-size: 18px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.fruit-container {
+    margin-top: 20px;
+}
+.fruit-item {
+    display: none;
+    text-align: center;
+}
+.fruit-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.fruit-item p {
+    font-size: 18px;
+    margin-top: 10px;
+}
