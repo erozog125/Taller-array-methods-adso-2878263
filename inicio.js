@@ -1,21 +1,21 @@
-const botones = document.querySelectorAll('button');
+const btnColores = document.getElementById('btnColores');
+const btnFrutas = document.getElementById('btnFrutas');
+const btnFormulario = document.getElementById('btnFormulario');
 
-botones.forEach(boton => {
-  boton.addEventListener('click', () => {
-    const textoBoton = boton.textContent;
-
-    switch (textoBoton) {
-      case 'Colores':
+btnColores.addEventListener('click', () => {
+    if (confirm('¿Estás seguro de que quieres ir a la página de colores?')) {
         window.location.href = 'colores.html';
-        break;
-      case 'Frutas':
-        window.location.href = 'frutas.html';
-        break;
-      case 'Formularios':
-        window.location.href = 'formularios.html';
-        break;
-      default:
-        console.log('Opción no válida');
     }
-  });
+});
+
+btnFrutas.addEventListener('click', () => {
+    if (confirm('¿Estás seguro de que quieres ir a la página de frutas?')) {
+        window.location.href = 'frutas.html';
+    }
+});
+
+btnFormulario.addEventListener('click', () => {
+    if (confirm('¿Estás seguro de que quieres ir al formulario?')) {
+        window.location.href = 'formularios.html';
+    }
 });
