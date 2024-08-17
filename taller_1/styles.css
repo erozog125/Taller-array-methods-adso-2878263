@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-change{
+    background-color: black;
+    padding: 5%;
+}
+
+#select-colors{
+    border: 2px solid greenyellow;
+}
