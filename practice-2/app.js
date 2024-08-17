@@ -1,31 +1,53 @@
 const fruits = [
-{
-    fruit: 'manzana',
-    id: 1,
-    image: 'assets/images/manzana-red.jpg'
-},
-{
-    fruit: 'banano',
-    id: 2,
-    image: 'assets/images/bananos.jpg'
-},
-{
-    fruit: 'mandarina',
-    id: 3,
-    image: 'assets/images/mandarina.jpg'
-},
-{
-    fruit: 'sandia',
-    id: 4,
-    image: 'assets/images/sandia.jpg'
-},
-{
-    fruit: 'kiwi',
-    id: 5,
-    image: 'assets/images/kiwi.jpg'
-}
-]
+    {
+        fruit: 'manzana',
+        id: 1,
+        image: 'assets/images/manzana-red.jpg'
+    },
+    {
+        fruit: 'banano',
+        id: 2,
+        image: 'assets/images/bananos.jpg'
+    },
+    {
+        fruit: 'mandarina',
+        id: 3,
+        image: 'assets/images/mandarina.jpg'
+    },
+    {
+        fruit: 'sandia',
+        id: 4,
+        image: 'assets/images/sandia.jpg'
+    },
+    {
+        fruit: 'kiwi',
+        id: 5,
+        image: 'assets/images/kiwi.jpg'
+    }
+];
 
+const inputPrompt = document.getElementById('input-text');
+const buttonPrompt = document.getElementById('search-btn');
+const result = document.getElementById('result');
+
+buttonPrompt.addEventListener('click', searchFruit);
+
+function searchFruit() {
+    const value = inputPrompt.value.toLowerCase();
+    const resultFilter = fruits.filter(fruit => fruit.fruit.toLowerCase().includes(value));
+
+
+    if (resultFilter.length > 0) {
+        result.innerHTML = resultFilter.map(fruit => `
+            <div>
+                <p>${fruit.fruit}</p>
+                <img src="${fruit.image}" alt="${fruit.fruit}" style="width:100px;height:auto;">
+            </div>
+        `);
+    } else {
+        result.innerHTML = 'No se encontraron resultados.';
+    }
+}
 
 
 
