@@ -34,13 +34,19 @@ buttonPrompt.addEventListener('click', searchFruit);
 
 function searchFruit() {
     const value = inputPrompt.value.toLowerCase();
-    const resultFilter = fruits.filter(fruit => fruit.fruit.toLowerCase().includes(value));
+    
+    if (value === '') {
+        result.innerHTML = 'La caja de texto está vacía.';
+        return;
+    }
+
+    const resultFilter = fruits.filter(fruitResult => fruitResult.fruit.toLowerCase().includes(value));
 
     if (resultFilter.length > 0) {
-        result.innerHTML = resultFilter.map(fruit => `
+        result.innerHTML = resultFilter.map(fruitResult => `
             <div>
-                <p>${fruit.fruit}</p>
-                <img src="${fruit.image}" alt="${fruit.fruit}" style="width:100px;height:auto;">
+                <p>${fruitResult.fruit}</p>
+                <img src="${fruitResult.image}"style="width:100px;height:auto;">
             </div>
         `);
     } else {
@@ -48,9 +54,6 @@ function searchFruit() {
     }
 }
 
-
-
 // Dado un Array de frutas, realiza un buscador por medio de input tipo text, filtrando por medio de la fruta ingresada,
 // recuerda que también existen los métodos para string. NOTA: Deeben construir el propio array. Mínimo 15 elementos,
 // para este caso nos mostrará el nombre de la fruta con su imagen
-
