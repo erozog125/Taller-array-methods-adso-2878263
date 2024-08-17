@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -36,11 +42,6 @@ nav ul li a:hover {
 }
 
 /* Estilos para el contenido principal */
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 h1 {
     font-size: 24px;
@@ -53,4 +54,26 @@ h1 {
 
 .cards{
     border: 2px solid;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.cards a {
+    color: #050505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card{
+padding: 1rem;
+width: 25rem;
+height: 20rem;
+display: flex;
+flex-direction: column;
+}
+
+.card img{
+    height: 20rem;
+    width: 20rem;
 }
