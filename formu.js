@@ -1,7 +1,11 @@
 let personas = [];
 
+function generarId() {
+    return Math.random().toString(36).substr(2, 6);
+}
+
 document.getElementById('guardarBtn').addEventListener('click', () => {
-    const id = document.getElementById('idPersona').value;
+    const id = document.getElementById('idPersona').value || generarId();
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const edad = document.getElementById('edad').value;
@@ -9,48 +13,40 @@ document.getElementById('guardarBtn').addEventListener('click', () => {
     const tipoSangre = document.getElementById('tipoSangre').value;
     const imagen = document.getElementById('imagen').files[0];
 
-    if (!nombre || !apellido || !edad || !genero || !tipoSangre || (!imagen && !id)) {
+    if (!nombre || !apellido || !edad || !genero || !tipoSangre || !imagen) {
         alert('Por favor, completa todos los campos');
         return;
     }
 
-    if (id) {
-        // Editar persona existente
-        const personaIndex = personas.findIndex(p => p.id == id);
-        if (personaIndex !== -1) {
-            personas[personaIndex] = {
-                id,
-                nombre,
-                apellido,
-                edad,
-                genero,
-                tipoSangre,
-                imagen: imagen ? URL.createObjectURL(imagen) : personas[personaIndex].imagen
-            };
-            alert('Persona actualizada');
-        }
+    const persona = {
+        id,
+        nombre,
+        apellido,
+        edad,
+        genero,
+        tipoSangre,
+        imagen: URL.createObjectURL(imagen)
+    };
+
+    const personaIndex = personas.findIndex(p => p.id === id);
+    if (personaIndex !== -1) {
+        personas[personaIndex] = persona;
+        alert('Persona actualizada');
     } else {
-        // Crear nueva persona
-        const persona = {
-            id: Date.now().toString(),
-            nombre,
-            apellido,
-            edad,
-            genero,
-            tipoSangre,
-            imagen: URL.createObjectURL(imagen)
-        };
         personas.push(persona);
-        alert(`Persona guardada con ID: ${persona.id}`);
+        alert('Persona guardada');
     }
 
+    console.log(personas);
     document.getElementById('personForm').reset();
-    document.getElementById('idPersona').value = ''; // Resetear ID después de guardar o actualizar
+    document.getElementById('idPersona').value = '';
 });
 
 document.getElementById('listarBtn').addEventListener('click', () => {
     const container = document.getElementById('cardsContainer');
     container.innerHTML = '';
+
+    console.log('Listando personas:', personas);
 
     if (personas.length === 0) {
         container.innerHTML = '<p>No hay personas registradas</p>';
@@ -66,7 +62,7 @@ document.getElementById('listarBtn').addEventListener('click', () => {
             <p>Edad: ${persona.edad}</p>
             <p>Género: ${persona.genero}</p>
             <p>Tipo de Sangre: ${persona.tipoSangre}</p>
-            <p>ID: ${persona.id}</p>
+            <p><strong>ID: ${persona.id}</strong></p>
         `;
         container.appendChild(card);
     });
@@ -74,7 +70,7 @@ document.getElementById('listarBtn').addEventListener('click', () => {
 
 document.getElementById('editarBtn').addEventListener('click', () => {
     const id = prompt('Introduce el ID de la persona que quieres editar:');
-    const persona = personas.find(p => p.id == id);
+    const persona = personas.find(p => p.id === id);
 
     if (persona) {
         document.getElementById('idPersona').value = persona.id;
