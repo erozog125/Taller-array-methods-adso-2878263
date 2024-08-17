@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="frutas.css" />
+		<title>Frutas</title>
+	</head>
+	<body>
+		<h1>Escoja su Fruta</h1>
+		<!-- permite al usuario escribir para buscar una fruta -->
+		<input
+			type="text"
+			id="searchInput"
+			placeholder="Busca una fruta..."
+			onkeyup="filterFruits()"
+		/>
+        <!-- mostrara las frutas filtradas -->
+		<div id="fruitList"></div>
+
+		<script src="frutas.js"></script>
+	</body>
+</html>
