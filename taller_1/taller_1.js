@@ -7,4 +7,6 @@ color.addEventListener('change', function (){
     const resultColor = arrayColors.find(element => element == color.value)
     console.log(resultColor)
     console.log(color.value)
+
+    document.body.style.backgroundColor = resultColor
 })
