@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333; /* Texto oscuro por defecto */
+    background-color: #f4f7f6; /* Fondo claro */
+    position: relative; /* Para posicionar el botón de inicio */
+}
+
+/* Estilo del encabezado */
+h1 {
+    text-align: center;
+    color: #4a90e2; /* Color azul para el título */
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón de volver */
+#back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Mover a la esquina superior derecha */
+    text-decoration: none;
+    background-color: #4a90e2; /* Color azul para el botón de volver */
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+#back-button:hover {
+    background-color: #357ab8; /* Color azul más oscuro al pasar el ratón */
+}
+
+/* Estilo del formulario */
+#person-form {
+    background-color: #ffffff; /* Fondo del formulario claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="number"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Borde claro */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo de los campos claros */
+    color: #333; /* Texto oscuro */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #4a90e2; /* Borde azul al enfocar */
+    outline: none;
+}
+
+/* Estilo del campo de búsqueda */
+#search-container {
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde claro */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo de búsqueda claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Estilo del contenedor de personas */
+#persons-container {
+    margin-top: 20px;
+}
+
+/* Estilo de las tarjetas de persona */
+.card {
+    background-color: #ffffff; /* Fondo de la tarjeta claro */
+    border: 1px solid #ccc; /* Borde claro */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las imágenes en las tarjetas */
+.card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    #person-form {
+        width: 90%; /* Ajustar el ancho del formulario en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 600px) {
+    #person-form {
+        width: 50%; /* Ajustar el ancho del formulario en pantallas medianas */
+    }
+}
+
+@media (min-width: 900px) {
+    #person-form {
+        width: 30%; /* Ajustar el ancho del formulario en pantallas grandes */
+    }
+}

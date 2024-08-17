@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buscador de Frutas</title>
+    <link rel="stylesheet" href="assets/styles/Frutas.css">
 </head>
 <body>
+
+    <a href="index.html" id="back-button">Inicio</a>
+
+    <h1>Buscador de Frutas</h1>
+    <input type="text" id="search-input" placeholder="Buscar fruta..." onkeyup="filterFruits()">
     
+    <div id="fruits-container"></div>
+
+    <script src="assets/jss/Frutas.js"></script>
+
 </body>
 </html>

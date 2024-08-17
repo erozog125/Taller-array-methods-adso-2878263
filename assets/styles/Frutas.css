@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+#back-button:hover {
+    background-color: #357ab8;
+}
+
+#search-input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#fruits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fruit {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 40px); /* Full width minus margins */
+    max-width: 300px; /* Max width for each fruit card */
+}
+
+.fruit img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (min-width: 600px) {
+    .fruit {
+        width: calc(50% - 40px); /* Two cards per row */
+    }
+}
+
+@media (min-width: 900px) {
+    .fruit {
+        width: calc(33.33% - 40px); /* Three cards per row */
+    }
+}

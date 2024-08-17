@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/Personaje.css">
+    <title>Formulario de Personas</title>
 </head>
 <body>
-    
+    <a href="index.html" id="back-button">Inicio</a>
+
+    <h1>Formulario de Personas</h1>
+
+    <div id="person-form">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="text" id="surname" placeholder="Apellido" required>
+        <input type="number" id="age" placeholder="Edad" required>
+        <select id="gender" required>
+            <option value="">Género</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select>
+        <input type="text" id="bloodType" placeholder="Tipo de Sangre" required>
+        <input type="file" id="image" accept="image/*">
+        <button onclick="savePerson()">Guardar</button>
+        <button onclick="editPerson()">Editar</button>
+        <button onclick="listPersons()">Listar</button>
+    </div>
+
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Buscar por nombre..." onkeyup="filterPersons()">
+    </div>
+
+    <div id="persons-container"></div>
+
+    <script src="assets/jss/Personaje.js"></script>
 </body>
 </html>
