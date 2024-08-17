@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #E6F3FF; /* Soft sky blue */
+    color: #6B5B95; /* Soft purple */
+}
+
+h1 {
+    color: #FF9AA2; /* Soft pink */
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    width: 300px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border: 2px solid #FFB7B2; /* Light coral */
+    border-radius: 20px;
+    background-color: #FFDAC1; /* Peach */
+    color: #6B5B95; /* Soft purple */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #FF9AA2; /* Soft pink */
+}
+
+.fruit-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fruit-item {
+    margin: 15px;
+    text-align: center;
+    background-color: #FFFFD8; /* Light yellow */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(107, 91, 149, 0.1); /* Soft purple shadow */
+    transition: transform 0.3s ease;
+}
+
+.fruit-item:hover {
+    transform: translateY(-5px);
+}
+
+.fruit-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #B5EAD7; /* Mint green */
+}
+
+.fruit-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #6B5B95; /* Soft purple */
+}
