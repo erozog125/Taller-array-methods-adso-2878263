@@ -15,20 +15,20 @@
     <section class="formCharacter">
       <section class="form">
         <section class="titleForm">
-          <h2>Gestión de personaje</h2>
+          <h2>Actualizar personaje</h2>
         </section>
         <form id="formRegistration" enctype="multipart/form-data">
           <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
+          <input type="text" id="actualizarNombre" name="nombre" required />
 
           <label for="apellido">Apellido:</label>
-          <input type="text" id="apellido" name="apellido" required />
+          <input type="text" id="actualizarApellido" name="apellido" required />
 
           <label for="edad">Edad:</label>
-          <input type="number" id="edad" name="edad" required />
+          <input type="number" id="actualizarEdad" name="edad" required />
 
           <label for="genero">Género:</label>
-          <select id="genero" name="genero" required>
+          <select id="actualizarGenero" name="genero" required>
             <option value="">Seleccione una opción</option>
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
@@ -40,7 +40,7 @@
           </select>
 
           <label for="tipoSangre">Tipo de Sangre:</label>
-          <select id="tipoSangre" name="tipoSangre" required>
+          <select id="actualizartipoSangre" name="tipoSangre" required>
             <option value="">Seleccione una opción</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
@@ -53,23 +53,14 @@
           </select>
 
           <label for="imagen">Subir Imagen:</label>
-          <input type="file" id="imagen" name="imagen" accept="image/*" required>
+          <input type="file" id="actualizarimagen" name="imagen" accept="image/*" required>
 
-          <button type="button" id="btnGuardar" onclick="save()">Guardar</button>
-          <button type="button" id="btnActualizar" onclick="update()" style="display:none;">Actualizar</button>
-          <button type="button" onclick="edit()">Editar</button>
+          <button type="button" onclick="update()">Actualizar</button>
           <button type="button" onclick="list()">Listar</button>
         </form>
       </section>
 
       <main id="Characters">
-        <!-- <div class="Character">
-          <img class="imgCharacter" id="imgCharacter" src="assets/fruits/None.png" alt="" />
-          <h3 class="name" id="name">nombre</h3>
-          <p class="age" id="age">33</p>
-          <p class="gener" id="gener">genero</p>
-          <p class="blood" id="blood">sangre</p>
-        </div> -->
       </main>
     </section>
     <script src="scripts/app3.js"></script>

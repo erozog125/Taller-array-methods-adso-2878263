@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
-  margin: 3rem;
+  margin: 1rem;
 }
 i {
   display: flex;
@@ -36,7 +36,7 @@ i {
   align-items: center;
 }
 select {
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 1rem;
   border-style: none;
 }
@@ -49,5 +49,73 @@ select {
 .img > img{
   width: 300px;
   height: auto;
+  border-radius: 50%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgb(100, 100, 196);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  width: 40rem;
+  padding: 1rem 5rem;
+}
+.titleForm{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(7, 7, 138);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+input{
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border-style: none;
+}
+button{
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border-style: none;
+  background-color: rgb(7, 7, 138);
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+.formCharacter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.Character{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:  rgb(100, 100, 196);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  gap: 0.5rem;
+}
+.Character > img{
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
