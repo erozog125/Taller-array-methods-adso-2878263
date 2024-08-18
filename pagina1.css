@@ -9,7 +9,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    transition: background-color 0.5s;
 }
 
 header {
@@ -18,8 +17,21 @@ header {
     color: #fff;
 }
 
-h1 {
-    margin: 0;
+a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button{
+    padding: 1rem;
+    background-color: black;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 select {
@@ -27,19 +39,4 @@ select {
     font-size: 16px;
 }
 
-a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.backindex{
-    padding: 2rem;
-}
-
-button{
-    padding: 2rem;
-    background-color: black;
-    font-size: 1rem;
-    border-radius: 5rem;
-}
