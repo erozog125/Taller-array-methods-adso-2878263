@@ -24,8 +24,7 @@ const fruitContainer = document.getElementById("fruitContainer");
 function mostrarFrutas(filtradas) {
     fruitContainer.innerHTML = ""; 
 
-    filtradas.forEach(function(fruta) {
- 
+    filtradas.forEach(function(fruta) { 
         const fruitItem = document.createElement("div");
         fruitItem.className = "fruit-item";
 
