@@ -6,14 +6,12 @@ colors.forEach(color => {
     option.textContent = color;
     colorSelect.appendChild(option);
 });
-
 // function changeColor(){
 //     const selectedColor = colorSelect.value;
 //     document.body.style.backgroundColor = selectedColor;
 // }
 
 // colorSelect.addEventListener('change', changeBackgroundColor)
-
 
 colorSelect.addEventListener('change', function() {
     const selectedColor = colorSelect.value;

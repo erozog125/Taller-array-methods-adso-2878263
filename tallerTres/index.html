@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personajes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Personajes</h1>
+        <form id="personajeForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <label for="tipoSangre">Tipo de Sangre:</label>
+            <input type="text" id="tipoSangre" name="tipoSangre" required>
+
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+
+            <button type="button" id="guardarBtn">Guardar</button>
+            <button type="button" id="editarBtn">Editar</button>
+            <button type="button" id="listarBtn">Listar</button>
+        </form>
+
+        <div id="editarForm" style="display:none;">
+            <label for="idPersonaje">ID del Personaje a Editar:</label>
+            <input type="number" id="idPersonaje" name="idPersonaje">
+            <button type="button" id="buscarBtn">Buscar</button>
+        </div>
+
+        <main id="personajesContainer"></main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
