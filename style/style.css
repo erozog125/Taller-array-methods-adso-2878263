@@ -1,0 +1,7 @@
+body {
+    transition: backgraund-color 0.5s ease;
+}
+
+.blue{
+    background-color: blue;
+}
