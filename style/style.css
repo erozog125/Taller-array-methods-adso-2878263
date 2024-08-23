@@ -37,6 +37,10 @@ main {
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+.fruit-card:hover{
+    transform: scale(1.08);
 }
 
 .fruit-card img {

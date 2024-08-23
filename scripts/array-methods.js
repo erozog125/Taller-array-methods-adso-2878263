@@ -15,8 +15,9 @@ window.addEventListener("load", function() {
   changeColor(); // Cambia el fondo a blanco
 });
 
-/* FILTER */
 
+
+/* FILTER */
 const fruits = [
   { name: "Manzana", image: "/assets/images/manzana.jpeg" },
   { name: "Banana", image: "/assets/images/banana.jpeg" },
@@ -31,8 +32,8 @@ const fruits = [
   { name: "Piña", image: "/assets/images/piña.jpeg" },
   { name: "Arandano", image: "/assets/images/arandano.jpeg" },
   { name: "Kiwi", image: "/assets/images/kiwi.jpeg" },
-  { name: "Cereza", image: "/assets/images/cereza.jpeg"},
-  { name: "Papaya", image: "/assets/images/papaya.jpeg" },
+  { name: "Cereza", image: "/assets/images/cereza.jpeg" },
+  { name: "Papaya", image: "/assets/images/papaya.jpeg" }
 ];
 
 function displayFruits(filteredFruits) {
