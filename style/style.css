@@ -1,7 +1,49 @@
 body {
-    transition: backgraund-color 0.5s ease;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.blue{
-    background-color: blue;
+main {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    margin-top: 3rem;
+}
+
+
+.fruits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.fruit-card {
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.fruit-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 15px rgba(0,0,0,0.3));
+
 }

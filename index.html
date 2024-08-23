@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <main>
+        <label for="colorSelector">Selecciona el color de fondo:</label>
+        <select id="colorSelector" onchange="changeColor">
+            <option value="white">Blanco</option>
+            <option value="lightblue" class="blue">Azul</option>
+            <option value="lightgreen">Verde</option>
+            <option value="lightyellow">Amarillo</option>
+            <option value="lightpink">Rosa</option>
+            <option value="lightgray">Gris</option>
+        </select>
+
+        <!-- FILTRO -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Busca una fruta..." onkeyup="filterFruits()">
+        </div>
+
+        <div class="fruits-container" id="fruitsContainer">
+            <img src="/assets/images/manzana.jpeg" alt="manzana">
+            <img src="/assets/images/banana.jpeg" alt="banana">
+            <img src="/assets/images/naranja.jpeg" alt="naranja">
+            <img src="/assets/images/fresa.jpeg" alt="fresa">
+            <img src="/assets/images/uva.jpeg" alt="uva">
+            <img src="/assets/images/sandia.jpeg" alt="sandia">
+            <img src="/assets/images/melon.jpeg" alt="melor">
+            <img src="/assets/images/durazno.jpeg" alt="durazno">
+            <img src="/assets/images/pera.jpeg" alt="pera">
+            <img src="/assets/images/mango.jpeg" alt="mango">
+            <img src="/assets/images/piña.jpeg" alt="piña">
+            <img src="/assets/images/arandano.jpeg" alt="arandano">
+            <img src="/assets/images/kiwi.jpeg" alt="kiwi">
+            <img src="/assets/images/cereza.jpeg" alt="cereza">
+            <img src="/assets/images/papaya.jpeg" alt="papaya">
+
+        </div>
+    </main>
+
+
+
 
     <script src="/scripts/array-methods.js"></script>
 </body>
+
 </html>
